@@ -18,7 +18,7 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/about_me");
+  await mongoose.connect(process.env.MONGO_URI);
 }
 
 app.get("/", (req, res) => {
