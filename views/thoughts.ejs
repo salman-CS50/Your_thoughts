@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Thoughts</title>
+    <link rel="stylesheet" href="/css/thought.css">
+</head>
+<body>
+    <a href="/thought" class="btn">share thought</a>
+    <% if(allThoughts && allThoughts.length > 0) { %>
+        <div class="thought-container">
+            <% allThoughts.forEach(thought => { %>
+                <div class="thought-box">
+                    <strong><%= thought.username %></strong>
+                    <p><%= thought.thought %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <div class="empty-container">
+            <p class="grey-out">No Thoughts on me!</p>
+        </div>
+    <% } %>
+</body>
+</html>

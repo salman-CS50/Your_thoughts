@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h3 class="title">Hi admin!</h3>
+    <a href="/thought" class="btn">share thought</a>
+    <% if(allThoughts && allThoughts.length > 0) { %>
+        <div class="thought-container">
+            <% allThoughts.forEach(thought => { %>
+                <div class="thought-box">
+                    <strong class="strong-user"><%= thought.username %></strong>
+                    <form action="/admin/<%= thought._id %>?_method=DELETE" method="post">
+                        <button type="submit" class="delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </form>
+                    <p><%= thought.thought %></p>
+                </div>
+
+            <% }); %>
+        </div>
+    <% } else { %>
+        <div class="empty-container">
+            <p class="grey-out">No Thoughts on me!</p>
+        </div>
+    <% } %>
+</body>
+</html>

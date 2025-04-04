@@ -1,0 +1,110 @@
+/* Reset default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+
+  /* Primary container */
+  .container-primary {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  /* Header styling */
+  .header {
+    width: 100%;
+    text-align: right;
+    padding: 10px 20px;
+  }
+
+  .link-btn {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .link-btn:hover {
+    background-color: #e9ecef;
+  }
+
+  /* Sub-container */
+  .container-sub {
+    text-align: center;
+    max-width: 600px;
+    margin-top: 50px;
+  }
+
+  /* Title styling */
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .about {
+    color: #007bff;
+    font-style: italic;
+  }
+
+  /* Info text */
+  .info {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Button styling */
+  .btn-white {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .btn-white:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .title {
+      font-size: 2rem;
+    }
+    .container-sub {
+      margin-top: 30px;
+      padding: 0 15px;
+    }
+  }
