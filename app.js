@@ -3,7 +3,7 @@ const path = require("path");
 const mongoose = require('mongoose');
 const Thought = require("./models/thought");
 const methodOverride = require('method-override');
-require("dotenv").config
+require("dotenv").config()
 const app = express();
 const port = 3000;
 
@@ -17,8 +17,10 @@ main()
   .then(() => console.log("connected to DB"))
   .catch((err) => console.log(err));
 
+// let MONGO_URL="mongodb://127.0.0.1:27017/about_me"
+
 async function main() {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 app.get("/", (req, res) => {
